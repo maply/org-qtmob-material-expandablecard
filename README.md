@@ -5,7 +5,7 @@ Requires [qml-material](http://github.com/papyros/qml-material).
 
 Example usage:
 
-''''
+```
 import QtQuick 2.5
 import Material 0.1
 
@@ -31,4 +31,4 @@ Window {
         }
     }
 }
-''''
+```
