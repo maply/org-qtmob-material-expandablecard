@@ -1,9 +1,22 @@
 # expandable-card
-A Material card with a lower section whose content can be revealed
+A Material card with a lower section whose content can be revealed.
 
 Requires [qml-material](http://github.com/papyros/qml-material).
 
-Example usage:
+## Installation
+
+Within your app's project folder:
+
+```
+git submodule add https://github.com/maply/expandable-card.git
+git submodule init
+git submodule update
+```
+
+Add the following line to your app's .pro file:  
+`include(expandable-card/expandable-card.pri)`
+
+## Usage example
 
 ```qml
 import QtQuick 2.5
@@ -19,12 +32,16 @@ Window {
         currentIndex: -1
         anchors.fill: parent
         spacing: Units.dp(8)
-        model: ["Val Seriana", "Terre del Vescovado", "Val Cavallina"]
+        model: [
+            {title:"Title 1",content:"Content 1"},
+            {title:"Title 2",content:"Content 2"},
+            {title:"Title 3",content:"Content 3"}
+        ]
         delegate: ExpandableCard {
             expanded: sticky ? true : ListView.isCurrentItem
             sticky: parent.width > Units.dp(600)
-            compactContent: Label {text: modelData}
-            Rectangle {height: 90; width: 30; color: "green"}
+            compactContent: Label {text: modelData.title}
+            Label {text: modelData.content}
             onClicked: {
                 repeater.currentIndex = index
             }
