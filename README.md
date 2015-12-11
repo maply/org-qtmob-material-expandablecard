@@ -7,9 +7,11 @@ Requires [qml-material](http://github.com/papyros/qml-material).
 
 Within your app's project folder:
 
-`git submodule add https://github.com/maply/expandable-card.git`
-`git submodule init`
-`git submodule update`
+```
+git submodule add https://github.com/maply/expandable-card.git
+git submodule init
+git submodule update
+```
 
 Add the following line to your app's .pro file:  
 `include(expandable-card/expandable-card.pri)`
