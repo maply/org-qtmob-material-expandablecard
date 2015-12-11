@@ -16,7 +16,7 @@ git submodule update
 Add the following line to your app's .pro file:  
 `include(expandable-card/expandable-card.pri)`
 
-## Usage
+## Usage example
 
 ```qml
 import QtQuick 2.5
