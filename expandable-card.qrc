@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ExpandableCard.qml</file>
+        <file>qmldir</file>
+    </qresource>
+</RCC>

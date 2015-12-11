@@ -1,3 +1,2 @@
-DISTFILES += \
-    $$PWD/ExpandableCard.qml \
-    $$PWD/qmldir
+RESOURCES += \
+    $$PWD/expandable-card.qrc
