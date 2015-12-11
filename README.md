@@ -43,7 +43,7 @@ Window {
             compactContent: Label {text: modelData.title}
             Label {text: modelData.content}
             onClicked: {
-                repeater.currentIndex = index
+                repeater.currentIndex = (repeater.currentIndex===index) ? -1 : index
             }
         }
     }
