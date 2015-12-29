@@ -13,8 +13,11 @@ git submodule init
 git submodule update
 ```
 
-Add the following line to your app's .pro file:  
+Include the project into your app's .pro file:  
 `include(expandable-card/org_qtmob_material_expandablecard.pri)`
+
+Add the qrc path to the QML engine import path (usually in main.cpp):  
+`engine.addImportPath("qrc:/");`
 
 ## Usage example
 
