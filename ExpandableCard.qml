@@ -6,10 +6,11 @@ Item {
     property bool sticky: false
     property bool expanded: sticky
     property int padding: Units.dp(16)
-    default property alias expandedContent: expandedContent.children
-    property alias compactContent: content.children
+    default property alias expandedContent: expandedBox.children
+    property alias compactContent: compactBox.children
     property alias backgroundColor: card.backgroundColor
-    property alias tintColor: card.tintColor
+    property alias compactBgColor: compactBox.color
+    property alias expandedBgColor: compactBox.color
 
     signal clicked()
 
@@ -20,8 +21,7 @@ Item {
         State {
             name: "isexpanded"
             when: expanded
-            PropertyChanges { target: card; height: content.height + expandedContent.height + padding * 3 }
-            PropertyChanges { target: card; backgroundColor: sticky ? "white" : Theme.accentColor }
+            PropertyChanges { target: card; height: compactBox.height + expandedBox.height }
         }
     ]
 
@@ -33,17 +33,16 @@ Item {
 
     Card {
         id: card
-        height: content.height + padding * 2
+        height: compactBox.height
         width: parent.width
 
         Column  {
             id: contentLayout
-            anchors.margins: padding
             anchors.fill: parent
-            spacing: padding
+            spacing: 0
 
-            Item {
-                id: content
+            Rectangle {
+                id: compactBox
                 height: childrenRect.height
                 width: parent.width
 
@@ -57,13 +56,16 @@ Item {
                 Icon {
                     id: revealIcon
                     name: expanded ? "navigation/arrow_drop_down" : "navigation/arrow_drop_up"
+                    anchors.top: parent.top
                     anchors.right: parent.right
+                    anchors.rightMargin: Units.dp(8)
+                    anchors.topMargin: anchors.rightMargin
                     visible: !sticky
                 }
             }
 
-            Item {
-                id: expandedContent
+            Rectangle {
+                id: expandedBox
                 height: childrenRect.height
                 width: parent.width
             }
