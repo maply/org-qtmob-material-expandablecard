@@ -1,2 +1,2 @@
 RESOURCES += \
-    $$PWD/expandable-card.qrc
+    $$PWD/org_qtmob_material_expandablecard.qrc
