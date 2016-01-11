@@ -9,6 +9,12 @@ Within your app's project folder:
 
 ```
 git submodule add https://github.com/maply/org.qtmob.material.expandablecard lib/org.qtmob.material.expandablecard
+```
+Commit to add the submodule's reference permanently to your repo.
+
+When subsequently cloning your repo, just do:
+
+```
 git submodule init
 git submodule update
 ```
