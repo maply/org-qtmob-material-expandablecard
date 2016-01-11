@@ -17,7 +17,7 @@ Include the project into your app's .pro file:
 `include(lib/org/qtmob/material/expandablecard/org_qtmob_material_expandablecard.pri)`
 
 Add the qrc path to the QML engine import path (usually in main.cpp):  
-`engine.addImportPath("qrc:/");`
+`engine.addImportPath("qrc:/org/qtmob/material/expandablecard");`
 
 ## Usage example
 
