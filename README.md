@@ -8,16 +8,16 @@ Requires [qml-material](http://github.com/papyros/qml-material).
 Within your app's project folder:
 
 ```
-git submodule add https://github.com/maply/org.qtmob.material.expandablecard lib/org/qtmob/material/expandablecard
+git submodule add https://github.com/maply/org.qtmob.material.expandablecard lib/org.qtmob.material.expandablecard
 git submodule init
 git submodule update
 ```
 
 Include the project into your app's .pro file:  
-`include(lib/org/qtmob/material/expandablecard/org_qtmob_material_expandablecard.pri)`
+`include(lib/org.qtmob.material.expandablecard/org_qtmob_material_expandablecard.pri)`
 
 Add the qrc path to the QML engine import path (usually in main.cpp):  
-`engine.addImportPath("qrc:/org/qtmob/material/expandablecard");`
+`engine.addImportPath("qrc:/");`
 
 ## Usage example
 
