@@ -22,6 +22,9 @@ git submodule update
 Include the project into your app's .pro file:  
 `include(lib/org.qtmob.material.expandablecard/org_qtmob_material_expandablecard.pri)`
 
+For autocompletion and syntax highlighting in Qt Creator, add the following to your app's .pro file:
+`QML_IMPORT_PATH += $$PWD/lib`
+
 ## Usage example
 
 ```qml
