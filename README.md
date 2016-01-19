@@ -1,4 +1,4 @@
-# org.qtmob.material.expandablecard
+# org-qtmob-material-expandablecard
 A Material card with a lower section whose content can be revealed.
 
 Requires [qml-material](http://github.com/papyros/qml-material).
@@ -8,7 +8,7 @@ Requires [qml-material](http://github.com/papyros/qml-material).
 Within your app's project folder:
 
 ```
-git submodule add https://github.com/maply/org.qtmob.material.expandablecard lib/org/qtmob/material/expandablecard
+git submodule add https://github.com/maply/org-qtmob-material-expandablecard lib/org/qtmob/material/expandablecard
 ```
 Commit to add the submodule's reference permanently to your repo.
 
