@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/org/qtmob/material/expandablecard">
+    <qresource prefix="/qt-project.org/imports/org/qtmob/material/expandablecard">
         <file>ExpandableCard.qml</file>
         <file>qmldir</file>
     </qresource>
