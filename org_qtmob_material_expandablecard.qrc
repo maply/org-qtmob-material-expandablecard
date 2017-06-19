@@ -2,5 +2,10 @@
     <qresource prefix="/qt-project.org/imports/org/qtmob/material/expandablecard">
         <file>ExpandableCard.qml</file>
         <file>qmldir</file>
+        <file>Icon.qml</file>
+        <file>ic_arrow_drop_down_black_24dp_2x.png</file>
+        <file>ic_arrow_drop_down_white_24dp_2x.png</file>
+        <file>ic_arrow_drop_up_black_24dp_2x.png</file>
+        <file>ic_arrow_drop_up_white_24dp_2x.png</file>
     </qresource>
 </RCC>

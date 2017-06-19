@@ -1,2 +1,3 @@
 module org.qtmob.material.expandablecard
 ExpandableCard 1.0 ExpandableCard.qml
+internal Icon Icon.qml

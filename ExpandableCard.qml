@@ -1,17 +1,16 @@
-import QtQuick 2.5
-import Material 0.1
+import QtQuick 2.7
+import QtQuick.Controls 2.0
+import QtQuick.Controls.Material 2.0
 
 Item {
     id: expandableCard
 
     property bool sticky: false
     property bool expanded: sticky
-    property int padding: Units.dp(16)
     default property alias expandedContent: expandedBox.children
     property alias compactContent: compactBox.children
-    property alias backgroundColor: card.backgroundColor
-    property alias compactBgColor: compactBox.color
-    //property alias expandedBgColor: compactBox.color
+    property color backgroundColor
+    property color compactBgColor
     property alias backgroundItem: background.children
     property alias preamble: preamble.children
 
@@ -41,8 +40,12 @@ Item {
         width: parent.width
     }
 
-    Card {
+    Pane {
         id: card
+        Material.elevation: 2
+        Material.background: backgroundColor
+        padding: 0
+        clip: true
         anchors.top: preamble.bottom
         height: compactBox.height
         width: parent.width
@@ -57,25 +60,21 @@ Item {
             anchors.fill: parent
             spacing: 0
 
-            Rectangle {
+            ItemDelegate {
                 id: compactBox
+                padding: 0
+                Material.background: compactBgColor
+                onClicked: expandableCard.clicked()
                 height: childrenRect.height
                 width: parent.width
-
-                Ink {
-                    anchors.fill: parent
-                    onClicked: {
-                        expandableCard.clicked()
-                    }
-                }
 
                 Icon {
                     id: revealIcon
                     color: "white"
-                    name: expanded ? "navigation/arrow_drop_down" : "navigation/arrow_drop_up"
+                    name: expanded ? "arrow_drop_down" : "arrow_drop_up"
                     anchors.top: parent.top
                     anchors.right: parent.right
-                    anchors.rightMargin: Units.dp(8)
+                    anchors.rightMargin: 8
                     anchors.topMargin: anchors.rightMargin
                     visible: !sticky
                 }
